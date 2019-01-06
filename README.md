@@ -45,3 +45,35 @@ Download & Run NBXleather
     Daemon or public node address needs setting as 127.0.0.1 and Daemon/node port set as 17122
 
 See: https://docs.appimage.org/user-guide/run-appimages.html
+
+Build
+
+You need to have Node.js and npm installed, go to https://nodejs.org and find out how to get it installed on your platform.
+
+Once you have Node+npm installed:
+first, download nibble-service binary for each platform
+
+$ from NibbleClassic official repo $ https://github.com/Sudosups $ extract the nibble-service executable somewhere
+clone the repo
+
+$ git clone https://github.com/Sudosups/NBX-Linux-GUI.git $ cd NBX-Linux-GUI
+install dependencies
+
+$ npm install
+create build+dist directory
+
+$ mkdir -p ./build && mkdir -p ./dist
+copy/symlink icons from assets, required for packaging
+
+$ cp ./src/assets/icon.* ./build/
+build GNU/Linux package
+
+$ mkdir -p ./bin/lin $ cp /path/to/linux-version-of/nibble-service ./bin/lin/ $ npm run dist-lin
+build Windows package
+
+$ mkdir -p ./bin/win $ cp /path/to/win-version-of/nibble-service.exe ./bin/win/ $ npm run dist-win
+build OSX package
+
+$ mkdir -p ./bin/osx $ cp /path/to/osx-version-of/nibble-service ./bin/osx/ $ npm run dist-mac
+
+Resulting packages or installer can be found inside dist/ directory.
