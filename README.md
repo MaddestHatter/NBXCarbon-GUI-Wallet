@@ -42,7 +42,8 @@ Download & Run NBXleather
 
 
     Run ./Nibbled by locating the app in your NBX directory and double clicking, then Run the NBXleather file by double clicking the app
-    Daemon or public node address needs setting as 127.0.0.1 and Daemon/node port set as 17122
+   To use own blockchain the Daemon or public node address needs setting as 127.0.0.1 and Daemon/node port set as 17122
+   To use a public node visit the main website to see a list of available nodes https://www.nibble-nibble.com/mining
 
 See: https://docs.appimage.org/user-guide/run-appimages.html
 
