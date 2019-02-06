@@ -26,7 +26,7 @@ config.walletServiceRpcPort = 8070;
 config.blockExplorerUrl = 'https://nibble-block.netlify.com/?hash=[[TX_HASH]]#blockchain_transaction';
 
 // default remote node to connect to, set this to a known reliable node for 'just works' user experience
-config.remoteNodeDefaultHost = '178.62.42.108:17122';
+config.remoteNodeDefaultHost = '178.62.42.108';
 
 // remote node list update url, set to null if you don't have one
 config.remoteNodeListUpdateUrl = 'null';
