@@ -26,14 +26,15 @@ config.walletServiceRpcPort = 8070;
 config.blockExplorerUrl = 'https://nbx.cryptonight.mine.nu/explorer/?hash=[[TX_HASH]]#blockchain_transaction';
 
 // default remote node to connect to, set this to a known reliable node for 'just works' user experience
-config.remoteNodeDefaultHost = '178.62.42.108';
+config.remoteNodeDefaultHost = 'nibblenode.net';
 
 // remote node list update url, set to null if you don't have one
 config.remoteNodeListUpdateUrl = 'null';
 
 // fallback remote node list, in case fetching update failed, fill this with known to works remote nodes
 config.remoteNodeListFallback = [
-    '127.0.0.1:17122',
+    'nibblenode.net:17122',
+    'node.nbx.hackerknowledge.de:17122',
     '127.0.0.1:17122',
     
 ];
