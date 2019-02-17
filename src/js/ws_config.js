@@ -5,7 +5,7 @@ config.appName = 'NBXleather';
 config.appDescription = 'NibbleClassic Wallet';
 config.appSlogan = 'Everyone loves a little nibble!';
 config.appId = 'NBXleather';
-config.appGitRepo = 'https://github.com/Sudosups/NBX-GUI';
+config.appGitRepo = 'https://github.com/NibbleClassic/NBXLeather-Wallet-Windows-edition';
 
 // default port number for your daemon (e.g. Nibbled)
 config.daemonDefaultRpcPort = 17122;
