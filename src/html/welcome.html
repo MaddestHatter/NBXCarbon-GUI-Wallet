@@ -2,9 +2,33 @@
     <section class="section" id="section-welcome">
         <div class="section-contents">
             <div class="div-welcome-top">
-                <h2 class="welcome-intro-title">Welcome!</h2>
+                <head>
+                    <h2 class="welcome-intro-title">Welcome!</h2>
+                    <Title>Random Text</Title>
+                    <script type="text/javascript">
+var textarray = [
+ "Everyone loves a little nibble!",
+ "I don't byte, I nibble!",
+ "Fancy a nibble?",
+ "I'm a secret nibbler...",
+ "I like to nibble at night",
+ "I tried a little nibble & now I can't stop"    // list of phrases
+];
+
+function RndText() {
+  var rannum= Math.floor(Math.random()*textarray.length);
+  document.getElementById('ShowText').innerHTML=textarray[rannum];
+}
+onload = function() { RndText(); }
+
+                    </script>
+                </head>
+                <body>
+                    <div id="ShowText"></div>
+                </body>
+                
                 <p class="welcome-intro">
-                    Get started by creating new wallet,<br> open or import your existing wallet.
+                    Get started by creating a new wallet,<br> open or import your existing wallet.
                 </p>
                 <p align="right">Exchanges</p>
                 <p align="right">
@@ -15,12 +39,12 @@
                 <div class="welcome-buttons">
                     <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-load" id="button-welcome-openwallet">Open wallet</button>
                     <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-create" id="button-welcome-createwallet">Create New Wallet</button>
-                                                        </div>
+                </div>
                 <div class="welcome-buttons">
                     <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-import-key" id="button-welcome-import-key">Import key</button>
                     <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-import-seed" id="button-welcome-import-seed">Import mnemonic seed</button>
                 </div>
             </div>
-        </div>  
+        </div>
     </section>
 </template>
