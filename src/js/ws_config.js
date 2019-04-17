@@ -20,7 +20,7 @@ config.walletServiceBinaryFilename = 'nibble-service';
 config.walletServiceBinaryVersion = "v1.0.0";
 
 // default port number for your wallet service (e.g. turtle-service)
-config.walletServiceRpcPort = 8070;
+config.walletServiceRpcPort = 17121;
 
 // block explorer url, the [[TX_HASH] will be substituted w/ actual transaction hash
 config.blockExplorerUrl = 'https://nbx.cryptonight.mine.nu/explorer/?hash=[[TX_HASH]]#blockchain_transaction';
