@@ -38,6 +38,8 @@ NBXleather relies on `nibble-service` to manage wallet container &amp; rpc commu
 
 On first launch, WalletShell will try to detect location/path of bundled `nibble-service` binary, but if it's failed, you can manually set path to the `nibble-service` binary on the Settings screen.
 
+On windows configuration is found in Directory %USERPROFILE%\AppData\Roaming\NBXleather , on issues it helps to delete it and restart the NBXLeatherWallet
+
 ### Download & Run NBXleather
 
 
