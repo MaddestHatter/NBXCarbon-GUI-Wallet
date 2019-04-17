@@ -152,7 +152,8 @@ WalletShellManager.prototype.startService = function(walletFile, password, onErr
     let serviceArgs = this.serviceArgsDefault.concat([
         '-w', walletFile,
         '-p', password,
-        '--log-level', 0,
+        '--bind-port', 17121, 
+	'--log-level', 0,
         '--address'
     ]);
 
@@ -202,7 +203,8 @@ WalletShellManager.prototype._spawnService = function(walletFile, password, onEr
         '--container-file', walletFile,
         '--container-password', password,
         '--enable-cors', '*',
-        '--daemon-address', this.daemonHost,
+        '--bind-port', 17121, 
+	'--daemon-address', this.daemonHost,
         '--daemon-port', this.daemonPort,
         '--log-level', SERVICE_LOG_LEVEL
     ]);
