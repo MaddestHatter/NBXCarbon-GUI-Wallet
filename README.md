@@ -30,21 +30,26 @@ This wallet contains the basic functions required to manage your NibbleClassic a
   * Custom node address that is not on the list will be added/remembered for future use
   * Theme: Dark & Light Mode
   * [Keyboard shortcuts](docs/shortcut.md)
+  * Exchange Listings Table
 
 
 ### Notes
 
 NBXleather relies on `nibble-service` to manage wallet container &amp; rpc communication.
 
-On first launch, WalletShell will try to detect location/path of bundled `nibble-service` binary, but if it's failed, you can manually set path to the `nibble-service` binary on the Settings screen.
+On first launch, NBXleather WalletShell will try to detect location/path of bundled `nibble-service` binary, 
+but if it's failed, you can manually set path to the `nibble-service` binary on the Settings screen.
 
-On windows configuration is found in Directory %USERPROFILE%\AppData\Roaming\NBXleather , on issues it helps to delete it and restart the NBXLeatherWallet
+In windows configuration files are found in directory %USERPROFILE%\AppData\Roaming\NBXleather , 
+on issues it helps to delete it and restart the NBXLeatherWallet
+
+Program File are situated %USERPROFILE%\AppData\Local\Programs\NBXleather
 
 ### Download & Run NBXleather
 
 
 #### GNU/Linux (AppImage):
-1. Download latest AppImage bundle here: https://github.com/Sudosups/NBX-GUI
+1. Download latest AppImage bundle here: https://github.com/NibbleClassic/NBXLeather-GUI-Wallet/releases/latest
 2. Make it executable, either via GUI file manager or command line, e.g. `chmod +x NBXleather-<version>-linux.AppImage`
 3. Run ./Nibbled by locating the app in your NBX directory and double clicking, then Run the NBXleather file by double clicking the app
 4. To use own blockchain the Daemon or public node address needs setting as 127.0.0.1 and Daemon/node port set as 17122
@@ -61,12 +66,12 @@ Once you have Node+npm installed:
 
 ### first, download nibble-service binary for each platform
 $ from NibbleClassic official repo
-$ https://github.com/Sudosups
+$ https://github.com/NibbleClassic/NibbleClassic-Core-CLI/releases/latest
 $ extract the nibble-service executable somewhere
 
 ### clone the repo
-$ git clone https://github.com/Sudosups/NBX-Linux-GUI.git
-$ cd NBX-Linux-GUI
+$ git clone https://github.com/NibbleClassic/NBXLeather-GUI-Wallet.git
+$ cd NBXLeather-GUI-Wallet
 
 ### install dependencies
 $ npm install

@@ -8,7 +8,7 @@ class WalletShellApi {
         this.service_host = args.service_host || '127.0.0.1';
         this.service_port = args.service_port || config.walletServiceRpcPort;
         this.service_password = args.service_password || "WHATEVER1234567891";
-        this.minimum_fee = (args.minimum_fee !== undefined) ? args.minimum_fee : (config.minimumFee*config.decimalDivisor);
+        this.minimum_fee = (args.minimum_fee !== undefined) ? args.minimum_fee : (config.minimumFee * config.decimalDivisor);
         this.anonimity = config.defaultMixin;
     }
     _sendRequest(method, params, timeout) {
@@ -149,12 +149,11 @@ class WalletShellApi {
             var backupKeys = {};
             this.getViewKey().then((vkres) => {
                 backupKeys.viewSecretKey = vkres.viewSecretKey;
-                return vkres;
-                //return Object.assign(vkres);
+                return backupKeys;
             }).then(() => {
                 this.getSpendKeys(req_params).then((vsres) => {
                     backupKeys.spendSecretKey = vsres.spendSecretKey;
-                    return vsres;
+                    return backupKeys;
                 }).catch((err) => {
                     return reject(err);
                 });
@@ -162,8 +161,9 @@ class WalletShellApi {
                 this.getMnemonicSeed(req_params).then((mres) => {
                     backupKeys.mnemonicSeed = mres.mnemonicSeed;
                     return resolve(backupKeys);
-                }).catch((err) => {
-                    return reject(err);
+                }).catch((_err) => { /* jshint ignore:line */
+                    backupKeys.mnemonicSeed = "";
+                    return resolve(backupKeys);
                 });
             }).catch((err) => {
                 return reject(err);
@@ -197,8 +197,8 @@ class WalletShellApi {
             params.fee = params.fee || this.minimum_fee;
             if (!params.address) return reject(new Error('Missing recipient address parameter'));
             if (!params.amount) return reject(new Error('Missing transaction amount parameter'));
-            if (parseFloat(params.fee) < 0.1) return reject(new Error('Minimum fee is 0.1 NBX'));
-            //[{address: "NBXxxxx...", amount: 100}];
+            if (parseFloat(params.fee) < 0.1) return reject(new Error('Minimum fee is 0.1 TRTL'));
+            //[{address: "TRTLxxxx...", amount: 100}];
             var req_params = {
                 transfers: [{ address: params.address, amount: params.amount }],
                 fee: params.fee
@@ -215,13 +215,11 @@ class WalletShellApi {
     reset(params) {
         return new Promise((resolve, reject) => {
             params = params || {};
-            //params.viewSecretKey = params.viewSecretKey || false;
             params.scanHeight = params.scanHeight || 0;
             let req_params = {};
             if (params.scanHeight && params.scanHeight > 1) {
                 req_params = { scanHeight: params.scanHeight };
             }
-            //if(params.viewSecretKey) req_params.viewSecretKey = params.viewSecretKey;
             this._sendRequest('reset', req_params).then(() => {
                 return resolve(true);
             }).catch((err) => {
@@ -258,7 +256,7 @@ class WalletShellApi {
             if (!params.address || !params.paymentId) {
                 return reject(new Error('Address and Payment Id parameters are required'));
             }
-            
+
             this._sendRequest('createIntegratedAddress', params).then((result) => {
                 return resolve(result);
             }).catch((err) => {
