@@ -10,7 +10,7 @@ const settings = new Store({name: 'Settings'});
 const log = require('electron-log');
 const splash = require('@trodi/electron-splashscreen');
 const config = require('./src/js/ws_config');
-;
+
 const IS_DEV = (process.argv[1] === 'dev' || process.argv[2] === 'dev');
 const IS_DEBUG = IS_DEV || process.argv[1] === 'debug' || process.argv[2] === 'debug';
 const LOG_LEVEL = IS_DEBUG ? 'debug' : 'warn';
@@ -30,7 +30,7 @@ const DEFAULT_SETTINGS = {
     service_bin: DEFAULT_SERVICE_BIN,
     service_host: '127.0.0.1',
     service_port: config.walletServiceRpcPort,
-    service_password: 'passwrd',
+    service_password: crypto.randomBytes(32).toString('hex'),
     service_timeout: 30,
     node_address: DEFAULT_REMOTE_NODE,
     pubnodes_last_updated: 946697799000,
