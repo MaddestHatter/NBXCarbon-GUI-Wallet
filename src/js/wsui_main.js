@@ -334,8 +334,9 @@ function showIntegratedAddressForm() {
     dialog.showModal();
 }
 
+//Catch Links to open in external default Browser and prepare for shell
 function prepareTags(){
-  aTags = document.getElementsByTagName("a");
+  aTags = document.getElementsByClassName("browserlink");
   for (var i = 0; i < aTags.length; i++) {
      aTags[i].setAttribute("onclick","require('electron').shell.openExternal('" + aTags[i].href + "')");
      aTags[i].href = "#"; 
