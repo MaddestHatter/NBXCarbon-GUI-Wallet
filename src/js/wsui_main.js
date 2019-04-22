@@ -347,7 +347,7 @@ function prepareTags(){
 
 // Add Exchange Listings
 function showExchanges() {
-	prepareTags();
+	//prepareTags();
 	let dialog = document.getElementById('ab-dialog');
     if (dialog.hasAttribute('open')) dialog.close();
     let exchangeInfo = document.getElementById('exchange-list').innerHTML;
