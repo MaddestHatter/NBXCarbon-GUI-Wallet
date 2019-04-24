@@ -38,8 +38,8 @@ config.remoteNodeDefaultHost = 'nibblenode.net';
 // for TRTL:
 // raw list: https://raw.githubusercontent.com/turtlecoin/turtlecoin-nodes-json/master/turtlecoin-nodes.json
 // filtered: https://trtl.nodes.pub/api/getNodes
-// config.remoteNodeListUpdateUrl = 'https://trtl.nodes.pub/api/getNodes';
-config.remoteNodeListUpdateUrl = null;
+config.remoteNodeListUpdateUrl = 'https://raw.githubusercontent.com/MaddestHatter/turtlecoin-nodes-json/nbx-nodes-json/turtlecoin-nodes.json';
+// config.remoteNodeListUpdateUrl = null; //disables autoupdate
 
 // set to false if using raw/unfiltered node list
 config.remoteNodeListFiltered = true;

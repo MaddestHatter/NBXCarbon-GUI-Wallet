@@ -6,6 +6,7 @@ const path = require('path');
 const fs = require('fs');
 const { clipboard, remote, ipcRenderer, shell } = require('electron');
 const Store = require('electron-store');
+const log = require('electron-log'); // Add logger
 const Mousetrap = require('./extras/mousetrap.min.js');
 const autoComplete = require('./extras/auto-complete');
 const wsutil = require('./ws_utils');
@@ -335,6 +336,7 @@ function showIntegratedAddressForm() {
 }
 
 //Catch Links to open in external default Browser and prepare for shell
+// not used atm
 function prepareTags(){
   aTags = document.getElementsByClassName("browserlink");
   for (var i = 0; i < aTags.length; i++) {
@@ -2896,10 +2898,10 @@ function fetchFromRaw() {
     let nodeStr = atob(settings.get('pubnodes_raw', ""));
     if(!nodeStr.length) return;
     console.debug(nodeStr);
-    
+
     let tested_nodes = [];
     let nodes = JSON.parse(nodeStr);
-
+	
     for(const n of nodes) {
         let feeLabel = parseInt(n.fee, 10) > 0 ? `Fee: ${wsutil.amountForMortal(n.fee)} ${config.assetTicker}` : "FREE";
         tested_nodes.push({
@@ -2919,7 +2921,12 @@ function fetchNodeInfo(force) {
     function fetchWait(url, timeout) {
         let controller = new AbortController();
         let signal = controller.signal;
-        timeout = timeout || 6800;
+        timeout = timeout || 6800; 
+		
+		
+		//log.debug('fetchWait url ', url); //debug01
+		log.debug('fetchWait timeout ', timeout); //debug01
+		
         return Promise.race([
             fetch(url, { signal }),
             new Promise((resolve) =>
@@ -3021,7 +3028,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => initNodeSelection, 500);
         }
     } else {
-        fetchFromRaw();
+            //walletOpenRefreshNodes.classList.add('hidden'); // hide refresh node when using trtl.nodes.pub (for now)
+	    fetchFromRaw();
     }
 }, false);
 

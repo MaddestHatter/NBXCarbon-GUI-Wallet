@@ -225,13 +225,17 @@ WalletShellManager.prototype._spawnService = function (walletFile, password, onE
         '--log-file', logFile
         //'--init-timeout', timeout
     ]);
-    
+	
+    log.debug('serviceArgs', serviceArgs); //debug01 service args
 
     // fallback for network resume handler
     let cmdArgs = serviceArgs;
     let serviceDown = false;
 
     let configFile = wsession.get('walletConfig', null);
+	
+	log.debug('configFile', configFile); //debug01 path to local config data
+	
     if (configFile) {
         let configFormat = settings.get('service_config_format', 'ini');
         if (configFormat === 'json') {
