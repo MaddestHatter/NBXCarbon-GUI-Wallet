@@ -2594,6 +2594,10 @@ function initHandlers() {
         };
 
         if (dialogType === 'saveFile') {
+            dialogOpts.defaultPath = path.join(
+                recentDir,
+                `new_wallet_${(new Date()).getTime()}.${config.walletFileDefaultExt}` //set default filename.date.extention
+				);
             dialogOpts.title = `Select directory to store your ${targetName}, and give it a filename.`;
             dialogOpts.buttonLabel = 'OK';
 
@@ -2924,8 +2928,8 @@ function fetchNodeInfo(force) {
         timeout = timeout || 6800; 
 		
 		
-		//log.debug('fetchWait url ', url); //debug01
-		log.debug('fetchWait timeout ', timeout); //debug01
+		log.debug('fetchWait url ', url); //debug01
+		//log.debug('fetchWait timeout ', timeout); //debug01
 		
         return Promise.race([
             fetch(url, { signal }),

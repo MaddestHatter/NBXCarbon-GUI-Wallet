@@ -42,15 +42,16 @@ config.remoteNodeListUpdateUrl = 'https://raw.githubusercontent.com/MaddestHatte
 // config.remoteNodeListUpdateUrl = null; //disables autoupdate
 
 // set to false if using raw/unfiltered node list
-config.remoteNodeListFiltered = true;
+config.remoteNodeListFiltered = false; 
 
 // fallback remote node list, in case fetching update failed, fill this with known to works remote nodes
 config.remoteNodeListFallback = [
-  'nibblenode.net:17122',
-  'node.nbx.hackerknowledge.de:17122',
   'nibble-nibble.net:17122',
   '127.0.0.1:17122'
 ];
+
+config.remoteNodeCacheSupported = false;
+config.remoteNodeSslSupported = false;
 
 // your currency name
 config.assetName = 'NibbleClassic';
