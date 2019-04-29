@@ -90,6 +90,7 @@ let sendInputFee;
 let sendButtonSend;
 let sendMaxAmount;
 let sendOptimize;
+let sendCreateSubAddress;
 // create wallet
 let overviewButtonCreate;
 let walletCreateInputPath;
@@ -189,6 +190,7 @@ function populateElementVars() {
     // maxSendFormHelp = document.getElementById('sendFormHelp');
     sendMaxAmount = document.getElementById('sendMaxAmount');
     sendOptimize = document.getElementById('button-send-optimize');
+	sendCreateSubAddress = document.getElementById('button-send-newsubaddress');
     // create wallet
     overviewButtonCreate = document.getElementById('button-create-create');
     walletCreateInputPath = document.getElementById('input-create-path');
@@ -2232,6 +2234,22 @@ function handleSendTransfer() {
         });
         return; // just return, it will notify when its done.
     });
+	
+	sendCreateSubAddress.addEventListener('click', () => {
+		if (!wsession.get('synchronized', false)) {
+            wsutil.showToast('Synchronization is in progress, please wait.');
+            return;
+        }
+
+        if (wsession.get('fusionProgress')) {
+            wsutil.showToast('Wallet optimization in progress, please wait');
+            return;
+        }
+			
+		wsutil.showToast("Button pushed"); // Shows ButtonMessage
+		WalletShellManager.prototype.getUnusedPort();
+	});
+	
 }
 
 function resetTransactions() {

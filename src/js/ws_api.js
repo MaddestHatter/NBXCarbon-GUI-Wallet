@@ -1,4 +1,5 @@
 const request = require('request-promise-native');
+const log = require('electron-log');
 const config = require('./ws_config.js');
 
 class WalletShellApi {
@@ -56,6 +57,20 @@ class WalletShellApi {
             });
         });
     }
+	//test for subaddresses
+	createSubAddress() {
+		return new Promise((resolve, reject) => {
+			this._sendRequest('createAddress').then((result) => {
+				//return resolve(result.address);
+				log.debug("subaddr", resolve(result.address));
+			}).catch((err) => {
+				return reject(err);
+			});
+		});
+	}
+		
+		
+	
     getFeeInfo() {
         return new Promise((resolve, reject) => {
             this._sendRequest('getFeeInfo').then((result) => {

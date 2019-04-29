@@ -38,7 +38,7 @@ config.remoteNodeDefaultHost = 'nibblenode.net';
 // for TRTL:
 // raw list: https://raw.githubusercontent.com/turtlecoin/turtlecoin-nodes-json/master/turtlecoin-nodes.json
 // filtered: https://trtl.nodes.pub/api/getNodes
-config.remoteNodeListUpdateUrl = 'https://raw.githubusercontent.com/MaddestHatter/turtlecoin-nodes-json/nbx-nodes-json/turtlecoin-nodes.json';
+config.remoteNodeListUpdateUrl = 'https://raw.githubusercontent.com/NibbleClassic/nibbler-nodes-json/master/nibbler-nodes.json';
 // config.remoteNodeListUpdateUrl = null; //disables autoupdate
 
 // set to false if using raw/unfiltered node list
@@ -50,7 +50,7 @@ config.remoteNodeListFallback = [
   '127.0.0.1:17122'
 ];
 
-config.remoteNodeCacheSupported = false;
+config.remoteNodeCacheSupported = false; //exclude unsupported nodes (bc-cache nodes) 
 config.remoteNodeSslSupported = false;
 
 // your currency name
