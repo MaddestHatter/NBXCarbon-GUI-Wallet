@@ -1,51 +1,44 @@
 <template>
+<script type="text/javascript">
+// Random slogans on welcome page
+	var textarray = [
+		"Everyone loves a little nibble!",
+		"I don't byte, I nibble!",
+		"Fancy a nibble?",
+		"I'm a secret nibbler...",
+		"I like to nibble at night",
+		"I tried a little nibble & now I can't stop" ,
+		"Half a Byte still a full nibble! " // list of phrases
+	];
+
+	function RndText() {
+		var rannum= Math.floor(Math.random()*textarray.length);
+		document.getElementById('ShowText').innerHTML=textarray[rannum];
+	}
+	onload = function() { RndText(); }
+</script>
     <section class="section" id="section-welcome">
         <div class="section-contents">
             <div class="div-welcome-top">
-                <head>
-                    <h2 class="welcome-intro-title">Welcome!</h2>
-                    <Title>NBXLeather Wallet</Title>
-                    <script type="text/javascript">
-var textarray = [
- "Everyone loves a little nibble!",
- "I don't byte, I nibble!",
- "Fancy a nibble?",
- "I'm a secret nibbler...",
- "I like to nibble at night",
- "I tried a little nibble & now I can't stop"    // list of phrases
-];
-
-function RndText() {
-  var rannum= Math.floor(Math.random()*textarray.length);
-  document.getElementById('ShowText').innerHTML=textarray[rannum];
-}
-onload = function() { RndText(); }
-
-                    </script>
-                </head>
-                <body>
-                    <div id="ShowText"></div>
-                </body>
-                
-                <p class="welcome-intro">
+                <h2 class="welcome-intro-title">Welcome!</h2>
+                <div id="ShowText"></div>
+				<p class="welcome-intro">
                     Get started by creating a new wallet,<br> open or import your existing wallet.
-                </p>
-                <p align="right">Exchanges</p>
-                <p align="right">
-                    <a href="https://www.finexbox.com/market/pair/NBX-BTC.html" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">Finexbox</a><br />
-                    <a href="https://cratex.io/index.php?pair=NBX/BTC" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">Cratex</a>
                 </p>
             </div>
             <div class="dev-welcome-bottom">
                 <div class="welcome-buttons">
-                    <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-load" id="button-welcome-openwallet">Open wallet</button>
-                    <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-create" id="button-welcome-createwallet">Create New Wallet</button>
+                    <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-load" id="button-welcome-openwallet" title="Open your existing wallet file (ctrl+o)">Open wallet</button>
+                    <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-create" id="button-welcome-createwallet"  title="Create new a wallet file (ctrl+n)">Create New Wallet</button>
                 </div>
                 <div class="welcome-buttons">
-                    <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-import-key" id="button-welcome-import-key">Import key</button>
-                    <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-import-seed" id="button-welcome-import-seed">Import mnemonic seed</button>
+                    <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-import-key" id="button-welcome-import-key" title="Import/restore your private keys (ctrl+i)">Import key</button>
+                    <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-import-seed" id="button-welcome-import-seed"  title="Import/restore your mnemonic seed (ctrl+shift+i)">Import mnemonic seed</button>
                 </div>
             </div>
-        </div>
+        </div>  
     </section>
+
+
+
 </template>
