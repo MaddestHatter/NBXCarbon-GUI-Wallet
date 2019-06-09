@@ -2246,7 +2246,7 @@ function handleSendTransfer() {
             return;
         }
 			
-		wsutil.showToast("Button pushed"); // Shows ButtonMessage
+		wsutil.showToast("Button pushed - In development"); // Shows ButtonMessage
 		WalletShellManager.prototype.getUnusedPort();
 	});
 	
