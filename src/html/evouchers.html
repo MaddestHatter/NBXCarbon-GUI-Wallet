@@ -4,11 +4,11 @@
             <div class="div-centered" id="evouchers-main">
                 <h3>Welcome to the NBX E.V.System!</h3>
                 <h6 scope="col"><img src="../assets/external/evoucher2.png" width="493.5" height="291"</img></h6>
-                <form action="mailto:shop@nibble-nibble.com" method="post" enctype="text/plain">
+                <form action="mailto:shop@nibble-nibble.com?subject=Starbucks Top up" method="post" enctype="text/plain">
                     Enter the e-mail address you want the voucher sending to:<br>
-                    <input type="text" name="E-mail to send voucher to"><br>
+                    <input type="text" name="E-mail to send voucher to" required><br>
                     Generate a Payment ID and paste it here:<br>
-                    <input type="text" name="Generated Payment ID"><br>
+                    <input type="text" name="Generated Payment ID" required><br>
 
 
                     <button onclick="sendMail(); return false">Launch Email</button>
@@ -20,3 +20,4 @@
         </div>
     </section>
 </template>
+
