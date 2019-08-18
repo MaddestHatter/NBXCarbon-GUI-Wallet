@@ -3,21 +3,58 @@
         <div class="section-contents">
             <div class="div-centered" id="evouchers-main">
                 <h3>Welcome to the NBX E.V.System!</h3>
-                <h6 scope="col"><img src="../assets/external/evoucher2.png" width="493.5" height="291"</img></h6>
-                <form action="mailto:shop@nibble-nibble.com?subject=Starbucks Top up" method="post" enctype="text/plain">
-                    Enter the e-mail address you want the voucher sending to:<br>
-                    <input type="text" name="E-mail to send voucher to" required><br>
-                    Generate a Payment ID and paste it here:<br>
-                    <input type="text" name="Generated Payment ID" required><br>
+                <h6 scope="col">
+                    <img src="../assets/external/SB.png" width="72.75" height="65.25"</img> Cost = 4000NBX
+                    <body>
+                        <button onclick="myFunction()">*Click for more info</button>
+                        <script>
+                            function myFunction() {
+                                alert("*Starbucks Cards activated in any of the participating countries can be used to make purchases and be reloaded in any other participating country. Starbucks Cards must first be activated by loading money onto the card in the country of purchase before being used internationally. The participating countries are; UK, USA, Canada, Australia, Mexico, and the Republic of Ireland.");
+                            }
+                        </script>
+
+                    </body>
 
 
-                    <button onclick="sendMail(); return false">Launch Email</button>
-                    <button onclick="reset(); return false">Reset</button>
-                </form>
+                    <form action="mailto:shop@nibble-nibble.com?subject=Starbucks Top up" method="post" enctype="text/plain">
+                        Enter the e-mail address you want the Starbucks voucher sending to:<br>
+                        <input type="text" name="E-mail to send voucher to" required><br>
+                        Generate a Payment ID and paste it here:<br>
+                        <input type="text" name="Generated Payment ID" required><br>
+                        Make the payment using the generated payment ID<br>
+                        Click the Launch button<br>
+                        <button onclick="sendMail(); return false">Launch Email</button>
+                        <button onclick="reset(); return false">Reset</button>
+                    </form>
+                </h6>
+                <h6 scope="col">
+                    <img src="../assets/external/Apex.png" width="57" height="75"</img> Cost = 7000NBX
+                    <body>
 
+                        <button onclick="myFunction2()">*Click for more info</button>
 
+                        <script>
+                            function myFunction2() {
+                                alert("Only available in the UK");
+                            }
+                        </script>
+
+                    </body>
+
+                    <form action="mailto:shop@nibble-nibble.com?subject=This months voucher" method="post" enctype="text/plain">
+                        Enter the e-mail address you want the Starbucks voucher sending to:<br>
+                        <input type="text" name="E-mail to send voucher to" required><br>
+                        Generate a Payment ID and paste it here:<br>
+                        <input type="text" name="Generated Payment ID" required><br>
+                        Make the payment using the generated payment ID<br>
+                        Click the Launch button<br>
+                        <button onclick="sendMail(); return false">Launch Email</button>
+                        <button onclick="reset(); return false">Reset</button>
+                    </form>
+                </h6>
             </div>
         </div>
     </section>
 </template>
+
 
