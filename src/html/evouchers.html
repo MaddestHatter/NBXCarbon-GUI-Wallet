@@ -38,6 +38,13 @@
                                 alert("Only available in the UK");
                             }
                         </script>
+                        <button onclick="myFunction3()">Vote for next voucher</button>
+
+                        <script>
+                            function myFunction3() {
+                                require('electron').shell.openExternal('https://www.nibble-nibble.com/evsystem');
+                            }
+                        </script>
 
                     </body>
 
@@ -56,5 +63,3 @@
         </div>
     </section>
 </template>
-
-
