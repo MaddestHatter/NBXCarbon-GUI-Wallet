@@ -3,21 +3,66 @@
         <div class="section-contents">
             <div class="div-centered" id="evouchers-main">
                 <h3>Welcome to the NBX E.V.System!</h3>
-                            <h6 scope="col" ><img src="../assets/external/evoucher2.png"width="658" height="388"</img></h6>
-                <table class="custom-table ex-table">
-                    <tbody>
+                <h6 scope="col">
+                    <img src="../assets/external/SB.png" width="72.75" height="65.25"</img> Cost = 4000NBX
+                    <body>
+                        <button onclick="myFunction()">*Click for more info</button>
+                        <script>
+                            function myFunction() {
+                                alert("Credit equal to £5 will be applied *Starbucks Cards activated in any of the participating countries can be used to make purchases and be reloaded in any other participating country. Starbucks Cards must first be activated by loading money onto the card in the country of purchase before being used internationally. The participating countries are; UK, USA, Canada, Australia, Mexico, and the Republic of Ireland.");
+                            }
+                        </script>
 
-<tr>
-
-        					<td>The all-in-one e-voting and e-voucher system!</td>
-        				
-							<td><a class="browserlink" href="#" onclick="require('electron').shell.openExternal('https://www.nibble-nibble.com/evsystem')"><strong>Visit</strong><a></td>
-</tr>
+                    </body>
 
 
-                    </tbody>
-                </table>
+                    <form action="mailto:shop@nibble-nibble.com?subject=Starbucks Top up" method="post" enctype="text/plain">
+                        Enter the e-mail address you want the Starbucks voucher sending to:<br>
+                        <input type="text" name="E-mail to send voucher to" required><br>
+                        Generate a Payment ID and paste it here (You will need this again on the payment screen so keep a note of it!):<br>
+                        <input type="text" name="Generated Payment ID" required><br>
+                        Make the payment to the address below along with the generated payment ID(Click to copy the payment address)<br>
+                        <input data-cplabel="@shop address" tabindex="0" data-noclear="1" title="Click to copy" type="text" class="text-block small-space ctcl" value="Nib1csyAamV6GEdQ37MVVv5e1Brs6ZG2WerhUV61bqoHNFT9KvqbyqW463BBwkBKdV1fNhTwsLh49WJ6wySuC2Ce8iBUPcFRx1" readonly="readonly" />
+                        Click the Launch button<br>
+                        <button onclick="sendMail(); return false">Launch Email</button>
+                        <button onclick="reset(); return false">Reset</button>
+                    </form>
+                </h6>
+                <h6 scope="col">
+                    <img src="../assets/external/Apex.png" width="57" height="75"</img> Cost = 7000NBX
+                    <body>
+
+                        <button onclick="myFunction2()">*Click for more info</button>
+
+                        <script>
+                            function myFunction2() {
+                                alert("*Only available in the UK");
+                            }
+                        </script>
+                        <button onclick="myFunction3()">Vote for next voucher</button>
+
+                        <script>
+                            function myFunction3() {
+                                require('electron').shell.openExternal('https://www.nibble-nibble.com/evsystem');
+                            }
+                        </script>
+
+                    </body>
+
+                    <form action="mailto:shop@nibble-nibble.com?subject=This months voucher" method="post" enctype="text/plain">
+                        Enter the e-mail address you want the e-voucher sending to:<br>
+                        <input type="text" name="E-mail to send voucher to" required><br>
+                        Generate a Payment ID and paste it here(You will need this again on the payment screen so keep a note of it!):<br>
+                        <input type="text" name="Generated Payment ID" required><br>
+                        Make the payment to the address below along with the generated payment ID(Click to copy the payment address)<br>
+                        <input data-cplabel="@shop address" tabindex="0" data-noclear="1" title="Click to copy" type="text" class="text-block small-space ctcl" value="Nib1csyAamV6GEdQ37MVVv5e1Brs6ZG2WerhUV61bqoHNFT9KvqbyqW463BBwkBKdV1fNhTwsLh49WJ6wySuC2Ce8iBUPcFRx1" readonly="readonly" />
+                        Click the Launch button<br>
+                        <button onclick="sendMail(); return false">Launch Email</button>
+                        <button onclick="reset(); return false">Reset</button>
+                    </form>
+                </h6>
             </div>
         </div>
     </section>
 </template>
+
