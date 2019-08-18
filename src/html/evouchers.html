@@ -3,24 +3,19 @@
         <div class="section-contents">
             <div class="div-centered" id="evouchers-main">
                 <h3>Welcome to the NBX E.V.System!</h3>
-                            <h6 scope="col" ><img src="../assets/external/evoucher2.png"width="493.5" height="291"</img></h6>
-<form method="post" action="">
-<p>Enter the email address to send voucher to...<p/>
-    <input type="text" id="email_address" name="name" placeholder="Enter your email address..." required>
-<p>Paste your Payment ID here...<p/>
-    <input type="text" id="payment_ID" name="name" placeholder="Enter your Payment ID..." required>
-    <button onclick="sendMail(); return false">Send Email</button>
-</form>
+                <h6 scope="col"><img src="../assets/external/evoucher2.png" width="493.5" height="291"</img></h6>
+                <form action="mailto:shop@nibble-nibble.com" method="post" enctype="text/plain">
+                    Enter the e-mail address you want the voucher sending to:<br>
+                    <input type="text" name="E-mail to send voucher to"><br>
+                    Generate a Payment ID and paste it here:<br>
+                    <input type="text" name="Generated Payment ID"><br>
 
-<script type="text/javascript">
-  function sendMail() {
-    var link = 'mailto:shop@nibble-nibble.com?subject=Starbucks&body=body '
-             +document.getElementById('email_address').value
-             +'&body='+document.getElementById('email_address').value;
-             +'&body='+document.getElementById('payment_ID').value;
-    window.location.href = link;
-}
-</script>
+
+                    <button onclick="sendMail(); return false">Launch Email</button>
+                    <button onclick="reset(); return false">Reset</button>
+                </form>
+
+
             </div>
         </div>
     </section>
