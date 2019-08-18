@@ -16,7 +16,21 @@
 		document.getElementById('ShowText').innerHTML=textarray[rannum];
 	}
 	onload = function() { RndText(); }
+
+
 </script>
+             
+       <body>
+                       <button type="button" style="background-color:yellow;margin:auto;display:block"onclick="myFunction4()">Check for updates - E.V.System requests will be invalid if using an out-dated version!</button>
+
+                        <script>
+                            function myFunction4() {
+                                require('electron').shell.openExternal('https://github.com/NibbleClassic/NBXLeather-GUI-Wallet/releases/latest');
+                            }
+                        </script>
+			
+                    </body>
+
     <section class="section" id="section-welcome">
         <div class="section-contents">
             <div class="div-welcome-top">
