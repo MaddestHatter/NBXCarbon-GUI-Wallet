@@ -124,6 +124,7 @@ let kswitch;
 let iswitch;
 let exswitch;
 let evswitch;
+let faucswitch;
 
 function populateElementVars() {
     // misc
@@ -132,6 +133,7 @@ function populateElementVars() {
     kswitch = document.getElementById('kswitch');
 	exswitch = document.getElementById('exswitch');
 	evswitch = document.getElementById('evswitch');
+	faucswitch = document.getElementById('faucswitch');
     iswitch = document.getElementById('button-section-about');
     firstTab = document.querySelector('.navbar-button');
     // generics
@@ -376,6 +378,20 @@ function showevouchers() {
             <span title="Close this dialog (esc)" class="dialog-close dialog-close-default" data-target="#ab-dialog"><i class="fas fa-window-close"></i></span>
         </div>`;
     dialog.innerHTML = evouchersList;
+    dialog.showModal();
+}
+
+// Add faucet
+function showfaucet() {
+	//prepareTags();
+	let dialog = document.getElementById('ab-dialog');
+    if (dialog.hasAttribute('open')) dialog.close();
+    let faucetInfo = document.getElementById('faucet-list').innerHTML;
+    let faucetList = `
+        <div class="transaction-panel">${faucetInfo}
+            <span title="Close this dialog (esc)" class="dialog-close dialog-close-default" data-target="#ab-dialog"><i class="fas fa-window-close"></i></span>
+        </div>`;
+    dialog.innerHTML = faucetList;
     dialog.showModal();
 }
 
@@ -2614,6 +2630,7 @@ function initHandlers() {
     iswitch.addEventListener('click', showAbout);
 	exswitch.addEventListener('click', showExchanges);
 	evswitch.addEventListener('click', showevouchers);
+	faucswitch.addEventListener('click', showfaucet);
 	
     function handleBrowseButton(args) {
         if (!args) return;
