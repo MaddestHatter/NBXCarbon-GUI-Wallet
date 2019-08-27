@@ -125,6 +125,7 @@ let iswitch;
 let exswitch;
 let evswitch;
 let faucswitch;
+let minerswitch;
 
 function populateElementVars() {
     // misc
@@ -134,6 +135,7 @@ function populateElementVars() {
 	exswitch = document.getElementById('exswitch');
 	evswitch = document.getElementById('evswitch');
 	faucswitch = document.getElementById('faucswitch');
+	minerswitch = document.getElementById('minerswitch');
     iswitch = document.getElementById('button-section-about');
     firstTab = document.querySelector('.navbar-button');
     // generics
@@ -392,6 +394,20 @@ function showfaucet() {
             <span title="Close this dialog (esc)" class="dialog-close dialog-close-default" data-target="#ab-dialog"><i class="fas fa-window-close"></i></span>
         </div>`;
     dialog.innerHTML = faucetList;
+    dialog.showModal();
+}
+
+// Add miner
+function showminer() {
+	//prepareTags();
+	let dialog = document.getElementById('ab-dialog');
+    if (dialog.hasAttribute('open')) dialog.close();
+    let minerInfo = document.getElementById('miner-list').innerHTML;
+    let minerList = `
+        <div class="transaction-panel">${minerInfo}
+            <span title="Close this dialog (esc)" class="dialog-close dialog-close-default" data-target="#ab-dialog"><i class="fas fa-window-close"></i></span>
+        </div>`;
+    dialog.innerHTML = minerList;
     dialog.showModal();
 }
 
@@ -2631,6 +2647,7 @@ function initHandlers() {
 	exswitch.addEventListener('click', showExchanges);
 	evswitch.addEventListener('click', showevouchers);
 	faucswitch.addEventListener('click', showfaucet);
+	minerswitch.addEventListener('click', showminer);
 	
     function handleBrowseButton(args) {
         if (!args) return;
