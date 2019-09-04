@@ -28,7 +28,7 @@ config.walletServiceConfigFormat = "json";
 config.walletServiceRpcPort = 17121;
 
 // block explorer url, the [[TX_HASH]] will be substituted w/ actual transaction hash
-config.blockExplorerUrl = 'https://nbx.cryptonight.mine.nu/explorer/?hash=[[TX_HASH]]#blockchain_transaction';
+config.blockExplorerUrl = 'https://nibbler.hopto.org/?hash=[[TX_HASH]]#blockchain_transaction';
 
 // default remote node to connect to, set this to a known reliable node for 'just works' user experience
 config.remoteNodeDefaultHost = 'nibblenode.net';
