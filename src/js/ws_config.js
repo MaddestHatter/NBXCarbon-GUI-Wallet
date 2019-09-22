@@ -83,9 +83,9 @@ config.addressBookObfuscationKey = '79009fb00ca1b7130832a42de45142cf6c4b7f333fe6
 // initial/sample entries to fill new address book
 config.addressBookSampleEntries = [
   {
-    name: 'Nibble Developers Funds',
+    name: 'Sups Development Fund',
     address: 'Nib1ZHnXbBfUYU5F6VFpVyZEHAQwYW7q5AMEqHhotUY8MgjfpJjshas8PjMCfNpqKs18xxqzjVsbYPr1G2F8NXDL5ff9LUQTRf',
-    paymentId: 'DF794857BC4587ECEC911AF6A6AB02513FEA524EC5B98DA8702FAC92195A94B3',
+    paymentId: '',
   },
   {
     name: 'Mad´s Development Fund',
