@@ -28,9 +28,11 @@
         <link rel="import" href="./address_book_add.html">
         <link rel="import" href="./shortcuts.html">
 		<link rel="import" href="./exchanges.html">
+		<link rel="import" href="./updates.html">
 		<link rel="import" href="./evouchers.html">
 		<link rel="import" href="./faucet.html">
 		<link rel="import" href="./miner.html">
+		<link rel="import" href="./social.html">
     </head>
 
     <body>
@@ -65,13 +67,15 @@
         <dialog id="ab-dialog" class="default-dialog address-book-dialog"></dialog>
         <dialog id="tf-dialog" class="tx-dialog"></dialog>
         <div class="side-buttons">
+	<button tabindex="-1" class="side-button" title="Check for updates" id="updswitch"><i class="fas fa-download"></i></button>
         <button tabindex="-1" class="side-button" title="About" id="button-section-about"><i class="fas fa-info-circle"></i></button>
         <button tabindex="-1" class="side-button" title="Show keyboard shortcut" id="kswitch"><i class="fas fa-keyboard"></i></button>
         <button  tabindex="-1" class="side-button" title="Switch to dark mode" id="tswitch"><i class="fas fa-moon"></i></button>
 		<button tabindex="-1" class="side-button" title="Exchange Nibble (NBX)" id="exswitch"><i class="fas fa-chart-line"></i></button>
 		<button tabindex="-1" class="side-button" title="NBX E.V.System" id="evswitch"><i class="fas fa-atom"></i></button>
-		<button tabindex="-1" class="side-button" title="Launch the faucet" id="faucswitch"><i class="fas fa-coins"></i></button>
-		<button tabindex="-1" class="side-button" title="Discover the One-Click miner" id="minerswitch"><i class="fas fa-toolbox"></i></button>
+		<button tabindex="-1" class="side-button" title="Launch the Faucet" id="faucswitch"><i class="fas fa-coins"></i></button>
+		<button tabindex="-1" class="side-button" title="Discover the One-Click-Miner" id="minerswitch"><i class="fas fa-toolbox"></i></button>
+		<button tabindex="-1" class="side-button" title="Social Zone" id="socialswitch"><i class="fas fa-couch"></i></button>
         </div>
         <div id="belekok" class="borokokok off"></div>
         <script>require('../js/wsui_main.js')</script>
