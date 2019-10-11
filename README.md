@@ -1,3 +1,5 @@
+![Image](https://i.imgur.com/EO7SyzW.png)
+
 NBXCarbon wallet
 
 ### Features:
