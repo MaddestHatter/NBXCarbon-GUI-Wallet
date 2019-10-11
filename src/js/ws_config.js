@@ -1,11 +1,11 @@
 var config = {};
 //Rebase File
 // self explanatory, your application name, descriptions, etc
-config.appName = 'NBXleather';
+config.appName = 'NBXCarbon';
 config.appDescription = 'NibbleClassic GUI Wallet';
 config.appSlogan = 'Everyone loves a little nibble!';
-config.appId = 'NBXleather';
-config.appGitRepo = 'https://github.com/NibbleClassic/NBXLeather-GUI-Wallet';
+config.appId = 'NBXCarbon';
+config.appGitRepo = 'https://github.com/NibbleClassic/NBXCarbon-GUI-Wallet';
 
 // default port number for your daemon (e.g. Nibbled daemon)
 config.daemonDefaultRpcPort = 17122;
@@ -56,7 +56,7 @@ config.remoteNodeSslSupported = false;
 // your currency name
 config.assetName = 'NibbleClassic';
 // your currency ticker
-config.assetTicker = 'NBX';
+config.assetTicker = 'NBXC';
 // your currency address prefix, for address validation
 config.addressPrefix = 'Nib';
 // standard wallet address length, for address validation
