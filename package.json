@@ -1,10 +1,10 @@
 {
-  "name": "NBXleather",
-  "productName": "NBXleather",
+  "name": "NBXCarbon",
+  "productName": "NBXCarbon",
   "description": "NibbleClassic GUI Wallet",
-  "version": "v1.2.1",
+  "version": "v2.0.0",
   "homepage": "https://nibble-nibble.com",
-  "repository": "https://github.com/NibbleClassic/NBXLeather-GUI-Wallet",
+  "repository": "https://github.com/NibbleClassic/NBXCarbon-GUI-Wallet",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -37,7 +37,7 @@
     "request-promise-native": "^1.0.7"
   },
   "build": {
-    "appId": "NBXleather",
+    "appId": "NBXCarbon",
     "copyright": "Copyright (c) 2018 Rixombea, Macroshock, TurtleCoin Developers, 2019 Nibble Developers",
     "directories": {
       "output": "dist",
