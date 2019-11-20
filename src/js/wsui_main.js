@@ -3147,7 +3147,7 @@ ipcRenderer.on('cleanup', () => {
     win.focus();
 
     var dialog = document.getElementById('main-dialog');
-    let htmlText = 'Terminating WalletShell...';
+    let htmlText = 'Exiting the Wallet...';
     if (wsession.get('loadedWalletAddress') !== '') {
         htmlText = 'Saving &amp; closing your wallet...';
     }

@@ -2,7 +2,7 @@
   "name": "NBXCarbon",
   "productName": "NBXCarbon",
   "description": "NibbleClassic GUI Wallet",
-  "version": "v2.0.0",
+  "version": "v2.0.1",
   "homepage": "https://nibble-nibble.com",
   "repository": "https://github.com/NibbleClassic/NBXCarbon-GUI-Wallet",
   "main": "main.js",
